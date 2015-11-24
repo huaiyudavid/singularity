@@ -2,7 +2,7 @@ package com.singularity.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.singularity.Andya;
+import com.singularity.main.Andya;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {

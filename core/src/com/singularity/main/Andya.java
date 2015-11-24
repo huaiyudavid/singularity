@@ -1,4 +1,4 @@
-package com.singularity;
+package com.singularity.main;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
