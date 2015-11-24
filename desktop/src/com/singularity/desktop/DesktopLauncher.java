@@ -7,6 +7,7 @@ import com.singularity.Andya;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
+		config.title = "Singularity";
 		new LwjglApplication(new Andya(), config);
 	}
 }
