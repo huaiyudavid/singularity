@@ -55,7 +55,7 @@ public class Andya extends ApplicationAdapter {
         for (float x = -20f; x <= 20f; x += 10f) {
             for (float z = -20f; z <= 20f; z += 10f) {
                 ModelInstance pikaInstance = new ModelInstance(pika);
-                pikaInstance.transform.setToTranslation(x, 0, z);
+                pikaInstance.transform.setToTranslation(x, 20, z);
                 instances.add(pikaInstance);
             }
         }
