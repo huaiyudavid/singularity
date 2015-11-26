@@ -7,7 +7,7 @@ import com.singularity.main.DecalTest;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		config.title = "Singularity"; // sup foo
+		config.title = "Singularity";
 		new LwjglApplication(new DecalTest(), config);
 	}
 }
