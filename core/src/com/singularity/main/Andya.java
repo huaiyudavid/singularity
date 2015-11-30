@@ -17,6 +17,8 @@ import com.badlogic.gdx.utils.Array;
 public class Andya extends ApplicationAdapter {
 	/*
 	 * SpriteBatch batch; Texture img;
+	 * 
+	 * ayo
 	 */
 	public PerspectiveCamera cam;
 	public CameraInputController camController;
