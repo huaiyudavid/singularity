@@ -38,7 +38,7 @@ public class SphereTest extends ApplicationAdapter {
 	       Gdx.input.setInputProcessor(camController);
 
 	       ModelBuilder modelBuilder = new ModelBuilder();
-	       model = modelBuilder.createSphere(2f, 2f, 2f, 20, 20, 
+	       model = modelBuilder.createSphere(2f, 2f, 2f, 25, 25, 
 	         new Material(),
 	         Usage.Position | Usage.Normal | Usage.TextureCoordinates);
 	       

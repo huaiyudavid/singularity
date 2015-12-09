@@ -2,6 +2,7 @@ package com.singularity.actors;
 
 import com.badlogic.gdx.math.Vector3;
 import com.singularity.gamemechanics.CollisionHandler;
+
 /*
  * Abstract class for mobile game objects
  */

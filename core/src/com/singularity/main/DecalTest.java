@@ -50,7 +50,8 @@ public class DecalTest extends ApplicationAdapter {
 		spriteBatch = new SpriteBatch();
 		shapes = new ShapeRenderer();
 		
-		frameBuffer = new FrameBuffer(Format.RGBA4444,waynePic.getWidth(),waynePic.getHeight(),true);
+		//frameBuffer = new FrameBuffer(Format.RGBA4444,waynePic.getWidth(),waynePic.getHeight(),true);
+		frameBuffer = new FrameBuffer(Format.RGBA4444,200,200,true);
 	}
 
 	@Override
@@ -58,6 +59,7 @@ public class DecalTest extends ApplicationAdapter {
 		camController.update();
 
 		Gdx.gl.glViewport(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		
 		//Gdx.gl.glClearColor(1, 1, 1, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
 		
@@ -84,7 +86,7 @@ public class DecalTest extends ApplicationAdapter {
 
 		shapes.end();
 		
-		
+		//Gdx.gl.glClearColor(1, 1, 1, 1);
 		
 		// 8. Enable RGBA color writing
 		// (SpriteBatch.begin() will disable depth mask)
@@ -100,8 +102,10 @@ public class DecalTest extends ApplicationAdapter {
 		spriteBatch.draw(waynePic, 0, 0);
 		
 		spriteBatch.end();
+		
 				
 		frameBuffer.end();
+		
 		
 		texture = frameBuffer.getColorBufferTexture();
 		textureRegion = new TextureRegion(texture);
@@ -112,13 +116,13 @@ public class DecalTest extends ApplicationAdapter {
 		Gdx.gl.glDepthFunc(GL20.GL_LESS);
 
         
-        /*spriteBatch.begin();
-        spriteBatch.draw(textureRegion, 0, 0);
-        spriteBatch.end();*/
+        spriteBatch.begin();
+        spriteBatch.draw(textureRegion, Gdx.graphics.getWidth()/2 - textureRegion.getRegionWidth()/2, Gdx.graphics.getHeight()/2 - textureRegion.getRegionHeight()/2 );
+        spriteBatch.end();
         
         wayne = new DecalSprite().build(textureRegion);
         wayne.sprite.setDimensions(20, 20);
-        wayne.sprite.setPosition(0, 0, 0);
+        wayne.sprite.setPosition(7, 7, 0);
         
         batch.add(wayne.sprite);
         batch.flush();
